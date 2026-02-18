@@ -23,7 +23,7 @@ namespace Random_Number_File_Writer
             const int rangeEnd = 101;
             // Setting up the random object outside of the loop!
             var rand = new Random();
-            randomNumber = rand.Next(rangeStart, rangeEnd);
+            
 
             // Try-catch for any file writing errors!
             try
@@ -48,6 +48,7 @@ namespace Random_Number_File_Writer
                         // While count is less than the user's number
                         while (count < userInput)
                         {
+                            randomNumber = rand.Next(rangeStart, rangeEnd);
                             outputFile.WriteLine(randomNumber.ToString()); // Write a random number 1-100 then increment count
                             count++;
                         }
